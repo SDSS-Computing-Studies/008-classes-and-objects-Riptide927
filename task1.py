@@ -25,15 +25,46 @@ constructor     - should require the student name, studentNumber and grade (in t
 class student:
 
     # properties should be listed first
+    name=''
+    studentNumber = 0
+    grade = 0
+    courses = []
+    grades = []
+    def __init__(self,name,studentNumber,grade): # You will need to create your own input parameters for all methods
+        self.name = name
+        self.studentNumber = studentNumber
+        self.grade = grade
+    
+    def getCourses(self,courses):
+        self.courses = courses
+        return courses
+    
+    def getGrades(self,grades):
+        self.grades = grades
+        return grades
 
-    def __init__(): # You will need to create your own input parameters for all methods
-        pass
+    def showCourses(self):
+        print(self.courses)
 
-    def __del__():
-        pass
+    def showGrade(self):
+        print(self.grade)
 
     def average(self):
-        pass
+        return (sum(self.grades))/(len(self.grades))
+
+    def getHonorRoll(self):
+        if len(self.grades) > 5:
+            if (((self.grades[0]+self.grades[1]+self.grades[2]+self.grades[3]+self.grades[4])/5)*100) > 86:
+                return True
+            else:
+                return False
+        else:
+            return print("Invalid amount of courses")
+    def text(self):
+        
+
+    def __del__(self):
+        print("That is all")
 
 def main():
     # This contains test data that will be used by the autograder.
@@ -44,8 +75,8 @@ def main():
     st1.getGrades( [91, 94, 87, 99, 82, 100, 73])
 
     st2 = student("Joe Lunchbox","12346", 11)
-    st1.getCourses( ["English","Math","Physics","Computers","Geography","Chemistry","French"] )
-    st1.getGrades( [71, 98, 93, 95, 68, 81, 71])
+    st2.getCourses( ["English","Math","Physics","Computers","Geography","Chemistry","French"] )
+    st2.getGrades( [71, 98, 93, 95, 68, 81, 71])
 
 
 
