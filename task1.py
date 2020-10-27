@@ -62,7 +62,7 @@ class student:
             return print("Invalid amount of courses")
     
     def __del__(self):
-        print("That is all")
+        pass
 
 def main():
     # This contains test data that will be used by the autograder.
