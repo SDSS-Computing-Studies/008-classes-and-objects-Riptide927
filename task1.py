@@ -60,9 +60,7 @@ class student:
                 return False
         else:
             return print("Invalid amount of courses")
-    def text(self):
-        
-
+    
     def __del__(self):
         print("That is all")
 
